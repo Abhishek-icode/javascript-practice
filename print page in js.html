@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is heading</h1>
+    <p id="div1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea possimus quia inventore debitis neque officiis ad distinctio velit maxime. Temporibus, nobis incidunt?</p>
+    <button onclick="myfunc('div1')">print1</button>
+    <p id="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, dolor a pariatur sapiente nulla autem blanditiis perferendis quasi, vitae quam corporis, eligendi ut rem dolorum cumque nisi maiores quo officiis. Rem neque rerum error magni, corporis odio, recusandae repellendus ut blanditiis repellat voluptates laudantium voluptate amet! Neque est voluptatem id nostrum cum iusto minus aliquam.</p>
+    <button onclick="myfunc('div2')">print2</button>
+    <p id="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis ex rerum nemo dolore dolores perferendis? Perferendis, quia maiores ullam natus sit dolorem quo molestiae optio, aut temporibus provident nesciunt, nihil laborum vel ratione laudantium repellendus! Dolorum, rerum iste ratione odio culpa libero fuga! Aperiam officiis fuga quos! Rem, quasi. Quasi similique accusantium voluptate omnis, quidem eum dicta magni dolor incidunt nostrum dolores eligendi consequuntur officia excepturi itaque corrupti nobis perspiciatis in temporibus corporis tempore maxime! Autem?</p>
+    <button onclick="myfunc('div2')">print3</button>
+    <button onclick="mywhole()">Print whole page</button>
+    <script>
+        function mywhole(){
+            window.print();
+        }
+
+        function myfunc(paravalue){
+            var backup = document.body.innerHTML;
+            var divcont = document.getElementById(paravalue).innerHTML;
+            document.body.innerHTML = divcont;
+            window.print();
+            document.body.innerHTML = backup;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Date object in javascript</h1>
+    <script>
+        var d = new Date();
+        document.write(d);
+        document.write("<br>")
+
+        var e = new Date(2021, 3, 21);
+        document.write(e);
+        document.write("<br>")
+
+
+        var datobj = new Date();
+        var day = datobj.getUTCDate();
+        var month = datobj.getUTCMonth() + 1;
+        var year = datobj.getUTCFullYear();
+        document.write("<br>")
+        document.write("Today =>  " + day + " / " + month + " / " + year);
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+
+        datobj.setDate(11);
+        datobj.setMonth(11);
+        datobj.setFullYear(2021);
+        document.write(datobj);
+    </script>
+</body>
+
+</html>
